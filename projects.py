@@ -50,7 +50,7 @@ def image_read(image):
     gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     binary = cv2.threshold(gray_image, 110, 255, cv2.THRESH_BINARY)[-1]
     binary_crop = binary[390:550, 380:650]
-    print(binary_crop)
+    # print(binary_crop)
     clean_pic = remove_large_shapes(binary_crop, 1000)
     cv2.imshow('aks', clean_pic)
     cv2.waitKey(0)
